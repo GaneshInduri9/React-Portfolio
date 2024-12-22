@@ -1,13 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Raleway", serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("./assets/image-from-rawpixel-id-5923497-jpeg.jpg");
+    background-size: cover; /* Ensures the background image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    height: 100vh; /* Ensures body takes full viewport height */
+    width: 100vw; /* Ensures body takes full viewport width */
+  }
+  
+/* Navbar Section  */
+.blurry {
+    background-color: #1b1a2ea9;
+    transition: all 0.3s ease-out 0s;
+    box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
+    backdrop-filter: blur(15px);
+}
+.navbar {
+    position: fixed;
+    transition: all 0.3s ease-out 0s;
+    padding: 0.3rem 2rem;
+    font-size: 1.2rem;
+}
+@media (max-width: 767px) {
+    .navbar {
+      padding: 1rem 2rem !important;
+      font-size: 1.4rem !important;
+      background-color: #000 !important;
+    }
+    .navbar-nav .nav-item a::after {
+      display: none !important;
+    }
+}
+.navbar-brand {
+    color: rgb(250, 250, 250) !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo {
+    height: 4em !important; /* Adjust height as needed */
+    width: auto !important; /* Maintain aspect ratio */
+    max-height: none; /* Ensure no height restrictions */
+    object-fit: contain; /* Prevent distortion */
+}
+  
+.navbar-nav .nav-link {
+    color: white !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+  
+.nav-link {
+    padding: 0.8rem 1rem !important;
+}
+  
+@media (max-width: 767px) {
+    .nav-link {
+        padding: 0.7rem 1rem !important;
+    }
+}
+  
+.navbar-nav .nav-item {
+    position: relative;
+    margin-left: 20px;
+}
+  
+.navbar-nav .nav-item a {
+    font-weight: 400;
+    transition: all 0.3s ease-out 0s;
+    position: relative;
+    z-index: 1;
+}
+  
+.navbar-nav .nav-item a::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 5px;
+    width: 0;
+    border-radius: 16px;
+    background: hwb(0 98% 2%);
+    bottom: 1px;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease-out 0s;
+}
+  
+.navbar-nav .nav-item a:hover::after {
+    width: 100%;
 }

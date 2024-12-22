@@ -1,10 +1,15 @@
-import './App.css';
-
+import React from 'react';
+import './index.css';
+import NavBar from './components/NavBar';
+import { BrowserRouter } from 'react-router-dom';
 function App() {
+
   return (
-    <div className="App">
-      <h3>Hello Ganesh</h3>
-    </div>
+    <React.StrictMode>
+    <BrowserRouter>
+      <NavBar />
+    </BrowserRouter>
+  </React.StrictMode>
   );
 }
 
