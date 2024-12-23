@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import logo from "../assets/GI_transparent_v2.png";
@@ -24,7 +24,7 @@ import { CgFileDocument } from "react-icons/cg";
 function NavBar(){
     const [expand, updateExpand] = useState(false);
     const [navBarColor, setNavBarColor] = useState(false);
-    const [darkmode, setDrakmode] = useState(true);
+    const [darkmode, setDarkMode] = useState(true);
 
     // on scroll blur the navbar.
     const scrollHandler = () => {
@@ -37,6 +37,10 @@ function NavBar(){
     };
 
     window.addEventListener("scroll", scrollHandler);
+
+    useEffect(() => {
+        document.body.className = darkmode ? "darkmode" : "lightmode";
+    }, [darkmode]);
 
     return(
         <Navbar 
@@ -84,9 +88,9 @@ function NavBar(){
                                     <CgFileDocument style={{marginBottom: "3px"}}/>Resume
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item className={darkmode ? "darkmode" : "lightmode"}>
-                                <Nav.Link onClick={() => setDrakmode((prevMode) => !prevMode)}>
-                                {darkmode ? (<AiOutlineSun style={{ marginRight: "5px" }} />) : (<AiOutlineMoon style={{ marginRight: "5px" }} />)}Mode
+                            <Nav.Item >
+                                <Nav.Link onClick={() => setDarkMode((prevMode) => !prevMode)}>
+                                {darkmode ? (<AiOutlineSun style={{marginBottom: "3px" }} />) : (<AiOutlineMoon style={{marginBottom: "3px" }} />)}Mode
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>
