@@ -40,50 +40,51 @@ function NavBar(){
             expanded={expand}
             expand = "md"
             className= {navBarColor ? "blurry" : "navbar" }
-            fixed= "top">
-                <Container>
-                    <Navbar.Brand href="/" className="d-flex">
-                        <img src={logo} className="img-fluid logo" alt="brand"/>
-                    </Navbar.Brand>
-                    <Navbar.Toggle 
-                        aria-controls="responsive-navbar-nav"
-                        onClick={() => {
-                            updateExpand(expand ? false : "expanded");
-                        }}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </Navbar.Toggle>
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto" defaultActiveKey="#home">
-                            <Nav.Item>
-                                <Nav.Link as={Link} to="/" onClick={() => updateExpand(false)}>
-                                    <AiOutlineHome/> Home
-                                </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link as={Link} onClick={() => updateExpand(false)}>
-                                    <AiOutlineUser/> About
-                                </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
-                                    <AiOutlineFundProjectionScreen/> Projects
-                                </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
-                                    <AiOutlineMail />Contact
-                                </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
-                                    <CgFileDocument />Resume
-                                </Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
+            fixed= "top"
+        >
+            <Container>
+                <Navbar.Brand href="/" className="d-flex">
+                    <img src={logo} className="img-fluid logo" alt="brand"/>
+                </Navbar.Brand>
+                <Navbar.Toggle 
+                    aria-controls="responsive-navbar-nav"
+                    onClick={() => {
+                        updateExpand(expand ? false : "expanded");
+                    }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </Navbar.Toggle>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ms-auto" defaultActiveKey="#home">
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/" onClick={() => updateExpand(false)}>
+                                <AiOutlineHome/> Home
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} onClick={() => updateExpand(false)}>
+                                <AiOutlineUser/> About
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
+                                <AiOutlineFundProjectionScreen/> Projects
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
+                                <AiOutlineMail />Contact
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
+                                <CgFileDocument />Resume
+                            </Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
         </Navbar>
     );
 }
