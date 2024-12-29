@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import logo from "../assets/GI_transparent_v2.png";
+import logo from "../assets/logo.png";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import {
@@ -9,8 +9,6 @@ import {
   AiOutlineUser,
   AiOutlineFundProjectionScreen,
   AiOutlineMail,
-  AiOutlineSun,
-  AiOutlineMoon,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 /**
@@ -24,7 +22,6 @@ import { CgFileDocument } from "react-icons/cg";
 function NavBar(){
     const [expand, updateExpand] = useState(false);
     const [navBarColor, setNavBarColor] = useState(false);
-    const [darkmode, setDarkMode] = useState(true);
 
     // on scroll blur the navbar.
     const scrollHandler = () => {
@@ -37,10 +34,6 @@ function NavBar(){
     };
 
     window.addEventListener("scroll", scrollHandler);
-
-    useEffect(() => {
-        document.body.className = darkmode ? "darkmode" : "lightmode";
-    }, [darkmode]);
 
     return(
         <Navbar 
@@ -65,32 +58,27 @@ function NavBar(){
                         <Nav className="ms-auto" defaultActiveKey="#home">
                             <Nav.Item>
                                 <Nav.Link as={Link} to="/" onClick={() => updateExpand(false)}>
-                                    <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                                    <AiOutlineHome/> Home
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link as={Link} onClick={() => updateExpand(false)}>
-                                    <AiOutlineUser style={{marginBottom: "3px"}}/> About
+                                    <AiOutlineUser/> About
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
-                                    <AiOutlineFundProjectionScreen style={{marginBottom: "3px"}}/> Projects
+                                    <AiOutlineFundProjectionScreen/> Projects
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
-                                    <AiOutlineMail style={{marginBottom:"3px"}}/>Contact
+                                    <AiOutlineMail />Contact
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
-                                    <CgFileDocument style={{marginBottom: "3px"}}/>Resume
-                                </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item >
-                                <Nav.Link onClick={() => setDarkMode((prevMode) => !prevMode)}>
-                                {darkmode ? (<AiOutlineSun style={{marginBottom: "3px" }} />) : (<AiOutlineMoon style={{marginBottom: "3px" }} />)}Mode
+                                    <CgFileDocument />Resume
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>
