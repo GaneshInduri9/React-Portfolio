@@ -1,5 +1,7 @@
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Type from "./Type";
+import SecondHome from "./SecondHome";
 function Home(){
     return (
         <section>
@@ -24,6 +26,7 @@ function Home(){
                     </Row>
                 </Container>
             </Container>
+            <SecondHome />
         </section>
     );
 }

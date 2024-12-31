@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './index.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home/Home';
 import PreLoader from './components/PreLoader';
+import ScrollToTop from "./components/ScrollToTop";
+import "./styles.css";
+import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -22,10 +24,13 @@ function App() {
   return (
     <Router>
         <PreLoader load={load}/>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <NavBar />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
     </Router>
   );
 }
