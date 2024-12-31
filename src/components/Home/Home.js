@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Type from "./Type";
 import SecondHome from "./SecondHome";
+import homeLogo from "../../assets/home-main.png";
 function Home(){
     return (
         <section>
@@ -22,6 +23,14 @@ function Home(){
                             <div style={{ padding: 50, textAlign: "left" }}>
                                 <Type />
                             </div>
+                        </Col>
+                        <Col md={5} style={{ paddingBottom: 20 }}>
+                            <img
+                            src={homeLogo}
+                            alt="home pic"
+                            className="img-fluid"
+                            style={{ maxHeight: "450px" }}
+                        />
                         </Col>
                     </Row>
                 </Container>

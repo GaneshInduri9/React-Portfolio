@@ -5,6 +5,7 @@ import PreLoader from './components/PreLoader';
 import ScrollToTop from "./components/ScrollToTop";
 import "./styles.css";
 import "./App.css";
+import Footer from './components/Footer';
 import {
   BrowserRouter as Router,
   Route,
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
+          <Footer/>
         </div>
     </Router>
   );
