@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar';
 import Home from './components/Home/Home';
+import Resume from './components/Resume/Resume';
 import PreLoader from './components/PreLoader';
 import ScrollToTop from "./components/ScrollToTop";
 import "./styles.css";
@@ -9,7 +10,8 @@ import Footer from './components/Footer';
 import {
   BrowserRouter as Router,
   Route,
-  Routes
+  Routes,
+  Navigate
 } from "react-router-dom";
 function App() {
   const [load, updateLoad] = useState(true);
@@ -30,6 +32,8 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume/>}/>
+            <Route path="*" element={<Navigate to="/"/>} />
           </Routes>
           <Footer/>
         </div>
