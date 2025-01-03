@@ -27,7 +27,7 @@ function Resume(){
                     variant="primary"
                     href={resumePdf}
                     target="_blank"
-                    style={{ maxWidth: "250px" }}
+                    className="resume-button"
                     >
                         <AiOutlineDownload />
                         &nbsp;Download CV
