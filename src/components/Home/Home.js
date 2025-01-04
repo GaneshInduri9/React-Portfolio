@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Type from "./Type";
 import SecondHome from "./SecondHome";
-import homeLogo from "../../assets/home-main.png";
+import homeLogo from "../../assets/home-main.svg";
 function Home(){
     return (
         <section>
@@ -29,7 +29,7 @@ function Home(){
                             src={homeLogo}
                             alt="home pic"
                             className="img-fluid"
-                            style={{ maxHeight: "450px" }}
+                            style={{ maxHeight: "400px"}}
                         />
                         </Col>
                     </Row>

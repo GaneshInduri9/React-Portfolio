@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar';
 import Home from './components/Home/Home';
 import Resume from './components/Resume/Resume';
+import About from './components/About/About';
 import PreLoader from './components/PreLoader';
 import ScrollToTop from "./components/ScrollToTop";
 import "./styles.css";
@@ -33,6 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume/>}/>
+            <Route path="/about" element={<About/>}/>
             <Route path="*" element={<Navigate to="/"/>} />
           </Routes>
           <Footer/>

@@ -421,6 +421,8 @@ html {
   padding: 0 ;
 }
 
+
+/* Resume */
 .resume-section {
   position: relative;
   padding-top: 110px;
@@ -445,4 +447,48 @@ html {
 .resume-button:hover{
   background-color:  #95ccde !important;
   box-shadow: 0 0 8px 2px rgba(149, 204, 222, 0.8) !important;
+}
+
+@media (max-width: 767px) {
+  .resume-left {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .resume-right {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
+
+
+/* About */
+.about-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  color: white !important;
+}
+
+.quote-card-view {
+  border: none ;
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.about-activity {
+  list-style: none ;
+  text-align: left ;
+  padding-left: 1px ;
+  margin-left: 2px;
+}
+
+@media (max-width: 767px) {
+  .about-img {
+    padding-top: 0 !important;
+  }
+}
+
+.blockquote-footer {
+  color: #ffffff !important;
 }
