@@ -65,10 +65,10 @@ html {
 }
 
 .navbar.blurry {
-    background-color: #1b1a2ea9;
+    background-color: #5d92a4a9;
     transition: all 0.3s ease-out 0s;
     box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
 }
 
 .navbar {
@@ -492,3 +492,43 @@ html {
 .blockquote-footer {
   color: #ffffff !important;
 }
+
+.skillset-heading{
+  padding-bottom: 10px;
+}
+
+.tech-icons {
+  font-size: 4.5em;
+  margin: 15px ;
+  padding: 10px ;
+  opacity: 0.93;
+  border: 1.7px solid #469EB7;
+  vertical-align: middle ;
+  text-align: center ;
+  border-radius: 5px;
+  display: table ;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) ;
+  overflow: hidden ;
+  transition: all 0.4s ease 0s ;
+}
+
+@media (max-width: 767px) {
+  .tech-icons {
+    margin: 10px !important;
+  }
+}
+
+.tech-icons:hover {
+  transform: scale(1.05) ;
+  overflow: hidden ;
+  border: 2.2px solid #00c0f5;
+  box-shadow: 0 4px 15px rgba(0, 192, 245, 0.5); /* Adds a glowing effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+.tech-icon-images {
+  padding: 20px ;
+  line-height: 1.6 ;
+}
+
+
+

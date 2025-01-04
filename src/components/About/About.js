@@ -1,6 +1,9 @@
 import { Col, Container,Row } from "react-bootstrap";
 import HackerImg from "../../assets/about-main.svg";
 import AboutCard from "./AboutCard";
+import Techstack from "./TechStack";
+import Toolstack from "./ToolStack";
+import Github from "./GitHub";
 function About() {
     return (
         <Container fluid className="about-section">
@@ -27,6 +30,15 @@ function About() {
                         <img src={HackerImg} alt="about" className="img-fluid" />
                     </Col>
                 </Row>
+                <h1 className="skillset-heading">
+                    Professional <strong className="cyan">Skillset </strong>
+                </h1>
+                <Techstack />
+                <h1 className="skillset-heading">
+                    <strong className="cyan">Tools</strong> I use
+                </h1>
+                <Toolstack/>
+                <Github />
             </Container>
         </Container>
     );

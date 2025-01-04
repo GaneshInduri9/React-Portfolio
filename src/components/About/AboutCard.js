@@ -19,7 +19,7 @@ function AboutCard() {
                     </p>
                     <ul>
                         <li className="about-activity">
-                            <FaRunning /> Running, I put a miliage around 80k per week.
+                            <FaRunning /> Running, I put a miliage around 8Ok per week.
                         </li>
                         <li className="about-activity">
                             <FaBook /> Reading books, the most recent one is <span className="cyan">Can't Hurt Me.</span>
