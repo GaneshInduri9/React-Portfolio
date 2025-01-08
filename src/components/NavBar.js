@@ -68,12 +68,12 @@ function NavBar(){
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
+                            <Nav.Link as={Link} to="/project" onClick={()=> updateExpand(false)}>
                                 <AiOutlineFundProjectionScreen/> Projects
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link as={Link} onClick={()=> updateExpand(false)}>
+                            <Nav.Link as={Link} to="/contact" onClick={()=> updateExpand(false)}>
                                 <AiOutlineMail />Contact
                             </Nav.Link>
                         </Nav.Item>
