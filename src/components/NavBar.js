@@ -4,11 +4,14 @@ import Nav from "react-bootstrap/Nav";
 import logo from "../assets/logo.png";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import { CgGitFork } from "react-icons/cg";
+import Button from "react-bootstrap/Button";
 import {
   AiOutlineHome,
   AiOutlineUser,
   AiOutlineFundProjectionScreen,
   AiOutlineMail,
+  AiFillStar,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 /**
@@ -73,14 +76,24 @@ function NavBar(){
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
+                            <Nav.Link as={Link} to="/resume" onClick={()=> updateExpand(false)}>
+                                <CgFileDocument />Resume
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
                             <Nav.Link as={Link} to="/contact" onClick={()=> updateExpand(false)}>
                                 <AiOutlineMail />Contact
                             </Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link as={Link} to="/resume" onClick={()=> updateExpand(false)}>
-                                <CgFileDocument />Resume
-                            </Nav.Link>
+                        <Nav.Item className="fork-btn">
+                            <Button
+                                href="https://github.com/GaneshInduri9/React-Portfolio" 
+                                target="_blank"
+                                className="fork-btn-inner"
+                            >
+                                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
+                                <AiFillStar style={{ fontSize: "1.1em" }} />
+                            </Button>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

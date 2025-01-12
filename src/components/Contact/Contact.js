@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Slide} from 'react-toastify';
+import Particle from '../Particle';
 
 
 function Contact() {
@@ -54,6 +55,7 @@ function Contact() {
 
   return (
     <>
+      <Particle/>
       <Container className="contact-heading">
         <h1>
           <strong className="cyan">Contact </strong> Me

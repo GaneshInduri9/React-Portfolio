@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import resumePdf from "../../assets/Ganesh_Resume.pdf"
+import resumePdf from "../../assets/Ganesh_Resume.pdf";
+import Particle from "../Particle";
 import { Document,Page,pdfjs } from "react-pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Button } from "react-bootstrap";
@@ -16,6 +17,7 @@ function Resume(){
     return (
         <div>
             <Container fluid className="resume-section">
+                <Particle/>
                 <Row className="resume">
                     <Document file={resumePdf} className="d-flex justify-content-center">
                         <Page pageNumber={1} scale={screenWidth > 786 ? 1.7 : 0.6} />

@@ -3,9 +3,11 @@ import ProjectCard from "./ProjectCard";
 import Leetcode150 from "../../assets/leetcode150.PNG";
 import weather from "../../assets/weatherApp.PNG";
 import { Col, Container} from "react-bootstrap";
+import Particle from "../Particle";
 function Project(){
     return(
         <Container fluid className="project-section">
+            <Particle/>
             <Container>
                 <h1 className="project-heading">
                     My Recent <strong className="cyan">Works </strong>

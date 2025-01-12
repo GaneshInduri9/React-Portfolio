@@ -200,6 +200,28 @@ html {
   color: #fff !important;
 }
 
+.fork-btn {
+  font-size: 1.1em !important;
+  padding-top: 10px !important;
+}
+
+.fork-btn-inner {
+  line-height: 1.4em !important;
+  background-color: #00a0c75e !important;
+  padding: 0.25rem 1.1rem !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.fork-btn-inner:hover {
+  transform: translateY(-2px) !important;
+  background-color: #51c4e486 !important;
+  border-color: #51c4e486 !important;
+}
+.fork-btn-inner::after {
+  display: none !important;
+}
+
   /* Home section */
 .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
