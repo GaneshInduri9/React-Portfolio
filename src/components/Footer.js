@@ -32,7 +32,7 @@ function Footer(){
                     </li>
                     <li className="social-icons">
                         <a
-                        href="https://www.instagram.com/induripatel"
+                        href="https://www.linkedin.com/in/ganeshinduri9"
                         style={{ color: "white" }}
                         target="_blank" 
                         rel="noopener noreferrer"
@@ -42,7 +42,7 @@ function Footer(){
                     </li>
                     <li className="social-icons">
                         <a
-                        href="https://www.linkedin.com/in/ganeshinduri9"
+                        href="https://www.instagram.com/induripatel"
                         style={{ color: "white" }}
                         target="_blank" 
                         rel="noopener noreferrer"
