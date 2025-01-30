@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { TbSend2 } from "react-icons/tb";
 import Social from "../Contact/Social";
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Slide} from 'react-toastify';
-import Particle from '../Particle';
-
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Slide } from "react-toastify";
+import Particle from "../Particle";
 
 function Contact() {
-
-  const[submitForm, setSubmit] = useState(false);
+  const [submitForm, setSubmit] = useState(false);
   const [name, setName] = useState("");
   const [mailid, setMailId] = useState("");
   const [message, setMessage] = useState("");
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -28,16 +26,16 @@ function Contact() {
     const templateParams = {
       from_name: name,
       from_email: mailid,
-      to_name: 'ganesh',
+      to_name: "ganesh",
       message: message,
     };
 
     emailjs
       .send(
-        'service_rm1swei',      // Replace with your EmailJS Service ID
-        'template_bgd1ucn',     // Replace with your EmailJS Template ID
+        "service_rm1swei", // Replace with your EmailJS Service ID
+        "template_bgd1ucn", // Replace with your EmailJS Template ID
         templateParams,
-        'Jkl-jWpAl5CMr4Ea_'       // Replace with your EmailJS Public Key
+        "Jkl-jWpAl5CMr4Ea_" // Replace with your EmailJS Public Key
       )
       .then(
         (response) => {
@@ -50,12 +48,12 @@ function Contact() {
         (error) => {
           toast.error("Failed to send Email!");
         }
-    );
+      );
   };
 
   return (
     <>
-      <Particle/>
+      <Particle />
       <Container className="contact-heading">
         <h1>
           <strong className="cyan">Contact </strong> Me
@@ -67,9 +65,9 @@ function Contact() {
       <Container>
         <Row className="justify-content-center">
           <Col md={2} className="contact-section">
-            <Form.Group className= "form-group" controlId="formName">
-              <Form.Label >Name</Form.Label>
-              <Form.Control 
+            <Form.Group className="form-group" controlId="formName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
                 type="text"
                 placeholder="Name"
                 onChange={(e) => setName(e.target.value)}
@@ -77,9 +75,9 @@ function Contact() {
             </Form.Group>
           </Col>
           <Col md={4} className="contact-section">
-            <Form.Group className= "form-group" controlId="formEmail">
+            <Form.Group className="form-group" controlId="formEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control 
+              <Form.Control
                 type="email"
                 placeholder="Mail Id"
                 onChange={(e) => setMailId(e.target.value)}
@@ -89,8 +87,8 @@ function Contact() {
         </Row>
         <Row className="justify-content-center">
           <Col md={6} className="contact-section">
-            <Form.Group className= "form-group" controlId="formMessage">
-              <Form.Label >Message</Form.Label>
+            <Form.Group className="form-group" controlId="formMessage">
+              <Form.Label>Message</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={8}
@@ -100,23 +98,24 @@ function Contact() {
             </Form.Group>
           </Col>
         </Row>
-        <p className="confirmation-para">
-          *You'll get a <span className="cyan">confirmation email</span> after sending.
-        </p>
         <Col>
-          <Button className = "submit-button" variant="primary" type="submit" onClick={(e) => handleSubmit(e)}>
+          <Button
+            className="submit-button"
+            variant="primary"
+            type="submit"
+            onClick={(e) => handleSubmit(e)}
+          >
             <span className="cyan">Submit </span>
-            <TbSend2 style={{color:"#469EB7 "}}/>
+            <TbSend2 style={{ color: "#469EB7 " }} />
           </Button>
         </Col>
-        
-        <Social/>
+
+        <Social />
         {submitForm && (
-          <ToastContainer position="top-center" transition={Slide}/>
+          <ToastContainer position="top-center" transition={Slide} />
         )}
       </Container>
     </>
-    
   );
 }
 

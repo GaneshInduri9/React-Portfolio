@@ -12,11 +12,19 @@ import {
 } from "react-icons/di";
 import { FaC } from "react-icons/fa6";
 import { SiZigbee } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <RiTailwindCssFill />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiExpress />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
@@ -37,7 +45,7 @@ function Techstack() {
         <DiGit />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiAws/>
+        <DiAws />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGroovy />
